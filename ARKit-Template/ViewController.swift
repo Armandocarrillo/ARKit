@@ -17,6 +17,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        sceneView.debugOptions = [ARSCNDebugOptions.showWorldOrigin]
         // Set the view's delegate
         sceneView.delegate = self
         
@@ -28,6 +29,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Set the scene to the view
         sceneView.scene = scene
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
